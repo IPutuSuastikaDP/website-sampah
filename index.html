@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EcoLearn – Multimedia Pembelajaran Pengelolaan Sampah</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Baloo+2:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+<!-- ===================== SPLASH ===================== -->
+<div id="splash">
+  <div class="splash-icon">♻️</div>
+  <div class="splash-title">EcoLearn</div>
+  <div class="splash-sub">Multimedia Pembelajaran Pengelolaan Sampah Berbasis Website</div>
+  <div class="splash-bar"><div class="splash-bar-fill"></div></div>
+  <button class="splash-btn" onclick="enterSite()">Mulai Belajar →</button>
+</div>
+
+<!-- ===================== SITE ===================== -->
+<div id="site">
+
+<!-- NAVBAR -->
+<nav>
+  <a class="nav-logo" onclick="showPage('beranda')">
+    <span class="nav-logo-icon">♻️</span> EcoLearn
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a onclick="showPage('beranda')" id="nav-beranda" class="active">🏠 Beranda</a></li>
+    <li><a onclick="showPage('pengenalan')" id="nav-pengenalan">📖 Pengenalan</a></li>
+    <li><a onclick="showPage('jenis')" id="nav-jenis">🗂️ Jenis Sampah</a></li>
+    <li><a onclick="showPage('dampak')" id="nav-dampak">⚠️ Dampak</a></li>
+    <li><a onclick="showPage('pengelolaan')" id="nav-pengelolaan">♻️ Pengelolaan</a></li>
+    <li><a onclick="showPage('kuis')" id="nav-kuis">📝 Kuis</a></li>
+  </ul>
+  <span class="nav-hamburger" id="hamburger" onclick="toggleNav()">☰</span>
+</nav>
+
+<!-- ==================== PAGE: BERANDA ==================== -->
+<div class="page active" id="page-beranda">
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-bg-circle"></div>
+    <div class="hero-bg-circle"></div>
+    <div class="hero-bg-circle"></div>
+    <div class="hero-content">
+      <div class="hero-badge">🎓 Media Pembelajaran</div>
+      <h1>Belajar <span>Pengelolaan Sampah</span> Bersama EcoLearn</h1>
+      <p class="hero-desc">Platform multimedia pembelajaran berbasis website yang menyajikan materi tentang pengelolaan sampah dalam bentuk teks, gambar, animasi, dan kuis interaktif untuk meningkatkan pemahaman dan kesadaran lingkungan.</p>
+      <div class="hero-btns">
+        <button class="btn-primary" onclick="showPage('pengenalan')">Mulai Belajar 🚀</button>
+
+      </div>
+    </div>
+
+
+  <div class="hero-video">
+    <video controls preload="metadata">
+        <source src="beranda.mp4" type="video/mp4">
+    </video>
+</div>
+
+
+  </section>
+
+  <!-- Menu Section -->
+  <div class="section">
+    <div class="section-label">📋 Pilih Materi</div>
+    <h2 class="section-title">Menu Pembelajaran</h2>
+    <p class="section-desc">Pilih topik yang ingin kamu pelajari. Tersedia materi lengkap mulai dari pengenalan sampah, jenis-jenis sampah, dampak, hingga cara pengelolaannya.</p>
+    <div class="menu-grid">
+      <div class="menu-card c1" onclick="showPage('pengenalan')">
+        <div class="menu-icon">📖</div>
+        <div class="menu-title">Pengenalan</div>
+        <div class="menu-desc">Pengertian sampah, jenis dasar, dan pentingnya kebersihan lingkungan dalam kehidupan sehari-hari.</div>
+        <div class="menu-arrow">Belajar Sekarang →</div>
+      </div>
+      <div class="menu-card c2" onclick="showPage('jenis')">
+        <div class="menu-icon">🗂️</div>
+        <div class="menu-title">Jenis &amp; Sumber Sampah</div>
+        <div class="menu-desc">Klasifikasi sampah organik, anorganik, B3 dan residu beserta sumber-sumbernya dari limbah rumah tangga.</div>
+        <div class="menu-arrow">Belajar Sekarang →</div>
+      </div>
+      <div class="menu-card c3" onclick="showPage('dampak')">
+        <div class="menu-icon">⚠️</div>
+        <div class="menu-title">Dampak Sampah</div>
+        <div class="menu-desc">Dampak negatif sampah terhadap lingkungan, kesehatan manusia, dan ekosistem apabila tidak dikelola dengan baik.</div>
+        <div class="menu-arrow">Belajar Sekarang →</div>
+      </div>
+      <div class="menu-card c4" onclick="showPage('pengelolaan')">
+        <div class="menu-icon">♻️</div>
+        <div class="menu-title">Pengelolaan Sampah</div>
+        <div class="menu-desc">Langkah-langkah pengelolaan sampah rumah tangga: pemilahan, kompos, dan penerapan prinsip 3R.</div>
+        <div class="menu-arrow">Belajar Sekarang →</div>
+      </div>
+      <div class="menu-card c5" onclick="showPage('kuis')">
+        <div class="menu-icon">🎯</div>
+        <div class="menu-title">Kuis Interaktif</div>
+        <div class="menu-desc">Uji pemahamanmu dengan 10 pertanyaan seputar pengelolaan sampah dan dapatkan skor langsung!</div>
+        <div class="menu-arrow">Mulai Kuis →</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Context -->
+  <div style="background: linear-gradient(135deg,#f0faf3,#e8f8ed); padding: 56px 40px;">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <div class="section-label">📍 Konteks Penelitian</div>
+      <h2 class="section-title">Mengapa Pengelolaan Sampah Penting?</h2>
+      <div class="two-col" style="margin-top: 28px;">
+        <div class="info-card">
+          <h3>🏝️ Isu Sampah di Bali</h3>
+          <p>Provinsi Bali menghadapi permasalahan serius dalam pengelolaan sampah. TPA Suwung yang dijadwalkan tutup pada 23 Desember 2025 menampung 70% sampah dari Denpasar, Badung, dan Gianyar — 50% dari total sampah Bali. Kesiapan infrastruktur pengelolaan sampah belum merata di seluruh wilayah.</p>
+        </div>
+        <div class="info-card sky">
+          <h3>🌐 Tujuan Website Ini</h3>
+          <p>Meningkatkan pengetahuan dan pemahaman pengguna mengenai pentingnya kebersihan lingkungan. Membantu kesadaran masyarakat, khususnya generasi muda, terhadap perilaku hidup bersih dan peduli lingkungan melalui media multimedia interaktif yang mudah diakses kapan saja.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== PAGE: PENGENALAN ==================== -->
+
+<div class="page" id="page-pengenalan">
+
+  <!-- Hero -->
+  <div class="pngl-hero">
+    <span class="pngl-hero-emoji">🗑️</span>
+    <h2>Apa Itu <span>Sampah</span>?</h2>
+    <p>Yuk kenalan dulu sama Ecolearn! Kita belajar apa itu sampah, dari mana asalnya, dan kenapa kita harus pandai mengelolanya! 🌿</p>
+    <div class="pngl-badge-row">
+    
+    </div>
+  </div>
+
+<div class="video-container">
+    <video controls>
+        <source src="pengenalan.mp4" type="video/mp4">
+    </video>
+</div>
+    
+  <div class="content-area">
+
+    <!-- Big question -->
+    <div class="pngl-big-q">
+      <h3>Apa itu sampah?</h3>
+      <p>
+        Sampah adalah benda atau barang yang <strong>sudah tidak digunakan lagi</strong> dan dibuang.
+        Menurut <strong>WHO (Organisasi Kesehatan Dunia)</strong>, sampah adalah sesuatu yang tidak dipakai,
+        tidak disukai, atau dibuang yang berasal dari kegiatan manusia.
+        <br><br>
+        Sampah bisa berbentuk <strong>padat</strong> seperti kertas, botol, dan sisa makanan.
+        Sampah muncul karena aktivitas kita sehari-hari — makan, berbelanja, belajar, bermain!
+      </p>
+    </div>
+
+    <!-- 3 Definisi -->
+    <div class="pngl-def-trio">
+      <div class="pngl-def-card">
+        <div class="pngl-def-icon">🏛️</div>
+        <div class="pngl-def-who">Menurut WHO</div>
+        <h4>Sesuatu yang tidak digunakan</h4>
+        <p>Benda yang sudah tidak dipakai, tidak disukai, atau dibuang dari kegiatan manusia dan tidak terjadi dengan sendirinya.</p>
+      </div>
+      <div class="pngl-def-card c-sky">
+        <div class="pngl-def-icon">📜</div>
+        <div class="pngl-def-who">Menurut UU No. 18 Tahun 2008</div>
+        <h4>Sisa dari manusia & alam</h4>
+        <p>Sampah adalah sisa kegiatan manusia dan/atau proses alam yang berbentuk padat yang harus dikelola dengan baik.</p>
+      </div>
+      <div class="pngl-def-card c-earth">
+        <div class="pngl-def-icon">🔬</div>
+        <div class="pngl-def-who">Menurut Standar Nasional Indonesia</div>
+        <h4>Limbah padat organik & anorganik</h4>
+        <p>Limbah padat dari bahan organik dan anorganik yang dianggap tidak berguna dan harus dikelola agar tidak merusak lingkungan.</p>
+      </div>
+    </div>
+
+
+
+    <!-- Sumber Sampah -->
+    <div class="pngl-source-section">
+      <h3>🏘️ Dari Mana Sampah Berasal?</h3>
+      <p style="color:var(--text-mid); font-size:0.93rem; margin-bottom:18px; line-height:1.65;">
+        Sampah bisa muncul dari mana saja — dari kegiatan manusia sehari-hari, maupun dari bencana alam seperti banjir dan longsor. Ini sumber-sumber utamanya:
+      </p>
+      <div class="pngl-source-grid">
+        <div class="pngl-source-item">
+          <div class="pngl-source-icon">🏠</div>
+          <div class="pngl-source-name">Pemukiman</div>
+          <div class="pngl-source-ex">Sumber terbesar! 57% berupa sampah organik dari dapur & halaman rumah</div>
+        </div>
+        <div class="pngl-source-item">
+          <div class="pngl-source-icon">🏭</div>
+          <div class="pngl-source-name">Industri & Pabrik</div>
+          <div class="pngl-source-ex">Sisa produksi: plastik, kayu, besi, sisa bahan baku</div>
+        </div>
+        <div class="pngl-source-item">
+          <div class="pngl-source-icon">🏢</div>
+          <div class="pngl-source-name">Perkantoran</div>
+          <div class="pngl-source-ex">Kertas, cartridge, kemasan makanan, plastik</div>
+        </div>
+        <div class="pngl-source-item">
+          <div class="pngl-source-icon">🛒</div>
+          <div class="pngl-source-name">Pusat Belanja</div>
+          <div class="pngl-source-ex">Supermarket & pasar: sayur, buah, kantong plastik, kemasan</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Peraturan -->
+    <div class="pngl-law">
+      <h3>📜 Aturan Pengelolaan Sampah di Indonesia</h3>
+      <p style="font-size:0.9rem; color:var(--text-mid); margin-bottom:16px; line-height:1.6;">
+        Di Indonesia ada banyak aturan yang dibuat pemerintah agar sampah bisa dikelola dengan baik dan lingkungan kita tetap bersih dan sehat!
+      </p>
+      <ul class="pngl-law-list">
+        <li class="pngl-law-item">
+          <div class="pngl-law-num">1</div>
+          <div>📘 <strong>UU No. 18 Tahun 2008</strong> tentang Pengelolaan Sampah — aturan utama tentang sampah di Indonesia</div>
+        </li>
+        <li class="pngl-law-item">
+          <div class="pngl-law-num">2</div>
+          <div>📗 <strong>PP No. 27 Tahun 2020</strong> tentang Pengelolaan Sampah Spesifik</div>
+        </li>
+        <li class="pngl-law-item">
+          <div class="pngl-law-num">3</div>
+          <div>📙 <strong>Permen LHK No. 14 Tahun 2021</strong> tentang Pengelolaan Sampah Rumah Tangga</div>
+        </li>
+        <li class="pngl-law-item">
+          <div class="pngl-law-num">4</div>
+          <div>📕 <strong>Perpres No. 97 Tahun 2017</strong> tentang Kebijakan & Strategi Nasional Pengelolaan Sampah</div>
+        </li>
+        <li class="pngl-law-item">
+          <div class="pngl-law-num">5</div>
+          <div>🏘️ <strong>Peraturan Daerah (Perda)</strong> — setiap daerah juga punya aturan masing-masing yang disesuaikan dengan kondisi setempat</div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Nav bottom -->
+    <!-- KUIS EVALUASI PENGENALAN -->
+    <div id="evalQuiz-pengenalan" class="eval-quiz-container">
+      <div class="eval-loading">⏳ Memuat kuis evaluasi...</div>
+    </div>
+
+    <div style="display:flex; justify-content:flex-end; margin-top:16px;">
+      <button class="btn-primary" onclick="showPage('jenis')" id="btn-lanjut-pengenalan" style="display:none;">Lanjut: Jenis Sampah →</button>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== PAGE: JENIS SAMPAH ==================== -->
+<div class="page" id="page-jenis">
+  <div class="page-header" style="background: linear-gradient(135deg, #1a3a5a, #3a9bd5);">
+    <div class="page-header-label">🗂️ Modul 2 — Jenis &amp; Sumber Sampah</div>
+    <h2>Klasifikasi &amp; Sumber Sampah Rumah Tangga</h2>
+    <p>Mengenal jenis-jenis sampah organik dan anorganik beserta sumber-sumbernya dalam kehidupan sehari-hari.</p>
+  </div>
+
+<div class="video-container">
+    <video controls>
+        <source src="jenis.mp4" type="video/mp4">
+    </video>
+</div>
+
+  <div class="content-area">
+
+    <!-- Jenis utama -->
+    <div class="jenis-grid">
+      <div class="jenis-card organik">
+        <div class="jenis-card-header">
+          <div class="jenis-card-icon">🌿</div>
+          <div>
+            <div class="jenis-card-title">Sampah Organik</div>
+            <div class="jenis-card-sub">Dapat terurai secara alami</div>
+          </div>
+        </div>
+        <div class="jenis-card-body">
+          <p>Limbah yang berasal dari sisa makhluk hidup (alam) seperti hewan, manusia, dan tumbuhan yang mengalami pembusukan atau pelapukan. Ramah lingkungan karena dapat diurai oleh bakteri secara alami dan berlangsungnya cepat.</p>
+          <p><strong>Contoh dari limbah rumah tangga:</strong></p>
+          <div class="tag-list">
+            <span class="tag green">🍚 Sisa nasi</span>
+            <span class="tag green">🥦 Sayuran busuk</span>
+            <span class="tag green">🍂 Daun kering</span>
+            <span class="tag green">🍌 Kulit buah</span>
+            <span class="tag green">☕ Ampas kopi/teh</span>
+            <span class="tag green">🐟 Tulang ikan</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="jenis-card anorganik">
+        <div class="jenis-card-header">
+          <div class="jenis-card-icon">🔵</div>
+          <div>
+            <div class="jenis-card-title">Sampah Anorganik</div>
+            <div class="jenis-card-sub">Sulit terurai, butuh ratusan tahun</div>
+          </div>
+        </div>
+        <div class="jenis-card-body">
+          <p>Sampah yang berasal dari sisa manusia yang sulit untuk diurai oleh bakteri. Membutuhkan waktu yang cukup lama — hingga ratusan tahun — untuk dapat diuraikan. Perlu penanganan khusus.</p>
+          <p><strong>Contoh dari limbah rumah tangga:</strong></p>
+          <div class="tag-list">
+            <span class="tag blue">🧴 Botol plastik</span>
+            <span class="tag blue">🥤 Kemasan bekas</span>
+            <span class="tag blue">📦 Karton</span>
+            <span class="tag blue">🔩 Logam/kaleng</span>
+            <span class="tag blue">🪟 Kaca/botol</span>
+            <span class="tag blue">📰 Koran lama</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sampah B3 dan Residu dari Storyboard -->
+    <div class="two-col">
+      <div class="info-card danger has-header">
+        <div class="info-card-header">
+          <div class="info-card-header-icon">☢️</div>
+          <div>
+            <div class="info-card-header-title">Sampah B3</div>
+            <div class="info-card-header-sub">Bahan Berbahaya &amp; Beracun</div>
+          </div>
+        </div>
+        <div class="info-card-body">
+        <h3>☢️ Sampah B3 (Bahan Berbahaya &amp; Beracun)</h3>
+        <p>Sampah B3 mengandung bahan kimia berbahaya sehingga harus dibuang dengan hati-hati dan tidak boleh dicampur dengan sampah biasa. Penanganan khusus diperlukan agar tidak mencemari tanah dan air.</p>
+        <div class="tag-list" style="margin-top:10px;">
+          <span class="tag" style="background:#fde8e8;color:#8b1a1a;">🔋 Baterai bekas</span>
+          <span class="tag" style="background:#fde8e8;color:#8b1a1a;">💊 Obat kadaluarsa</span>
+          <span class="tag" style="background:#fde8e8;color:#8b1a1a;">🖨️ Tinta printer</span>
+        </div>
+        </div>
+      </div>
+      <div class="info-card earth has-header">
+        <div class="info-card-header">
+          <div class="info-card-header-icon">🚮</div>
+          <div>
+            <div class="info-card-header-title">Sampah Residu</div>
+            <div class="info-card-header-sub">Tidak dapat didaur ulang</div>
+          </div>
+        </div>
+        <div class="info-card-body">
+        <h3>🚮 Sampah Residu</h3>
+        <p>Sampah residu adalah sampah yang sudah tidak bisa didaur ulang dan tidak bisa dijadikan kompos — harus dibuang pada tempatnya dan berakhir di TPA. Contoh: popok sekali pakai, puntung rokok, pembalut.</p>
+        <div class="tag-list" style="margin-top:10px;">
+          <span class="tag" style="background:#f5e6d8;color:#5a3a1a;">🚬 Puntung rokok</span>
+          <span class="tag" style="background:#f5e6d8;color:#5a3a1a;">🧻 Tisu kotor</span>
+          <span class="tag" style="background:#f5e6d8;color:#5a3a1a;">👶 Popok</span>
+        </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sumber Sampah -->
+    <h3 style="font-family:'Baloo 2',cursive; font-size:1.2rem; color:var(--green-dark); margin:28px 0 16px;">🏠 Sumber-Sumber Sampah Rumah Tangga</h3>
+    <div class="sumber-grid">
+      <div class="sumber-card">
+        <div class="sumber-icon">🍳</div>
+        <div class="sumber-title">Dapur</div>
+        <div class="sumber-desc">Sisa makanan, kulit sayur &amp; buah, kemasan makanan, minyak goreng bekas</div>
+      </div>
+      <div class="sumber-card">
+        <div class="sumber-icon">🛁</div>
+        <div class="sumber-title">Kamar Mandi</div>
+        <div class="sumber-desc">Kemasan sabun &amp; sampo, botol plastik, tisu &amp; kapas, sikat gigi bekas</div>
+      </div>
+      <div class="sumber-card">
+        <div class="sumber-icon">🛋️</div>
+        <div class="sumber-title">Ruang Tamu</div>
+        <div class="sumber-desc">Koran &amp; majalah bekas, kemasan snack, kardus, kaleng minuman</div>
+      </div>
+      <div class="sumber-card">
+        <div class="sumber-icon">🌳</div>
+        <div class="sumber-title">Taman/Halaman</div>
+        <div class="sumber-desc">Daun kering, ranting pohon, rumput potong, sampah organik kebun</div>
+      </div>
+      <div class="sumber-card">
+        <div class="sumber-icon">📦</div>
+        <div class="sumber-title">Belanja Online</div>
+        <div class="sumber-desc">Bubble wrap, kardus pengiriman, styrofoam, plastik kemasan</div>
+      </div>
+      <div class="sumber-card">
+        <div class="sumber-icon">⚡</div>
+        <div class="sumber-title">Elektronik</div>
+        <div class="sumber-desc">Baterai bekas, kabel rusak, lampu LED mati, perangkat elektronik tua</div>
+      </div>
+    </div>
+
+
+
+    <!-- KUIS EVALUASI JENIS -->
+    <div id="evalQuiz-jenis" class="eval-quiz-container">
+      <div class="eval-loading">⏳ Memuat kuis evaluasi...</div>
+    </div>
+
+    <div style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; margin-top:16px;">
+      <button class="btn-secondary" style="background:var(--green-pale);color:var(--green-dark);border:2px solid var(--green-light);" onclick="showPage('pengenalan')">← Kembali: Pengenalan</button>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== PAGE: DAMPAK ==================== -->
+<div class="page" id="page-dampak">
+  <div class="page-header" style="background: linear-gradient(135deg, #4a1a1a, #d94040);">
+    <h2>Dampak Negatif Sampah Terhadap Lingkungan</h2>
+    <p>Berbagai dampak yang ditimbulkan oleh pengelolaan sampah yang tidak tepat terhadap lingkungan, kesehatan, dan ekosistem.</p>
+  </div>
+
+  <div class="video-container">
+    <video controls>
+        <source src="dampak.mp4" type="video/mp4">
+    </video>
+</div>
+
+  <div class="content-area">
+
+    <!-- Alert -->
+    <div class="alert-box">
+      <span class="alert-icon">🚨</span>
+      <div>
+        <h4>Bahaya Sampah Tidak Terkelola</h4>
+        <p>Sampah yang tidak dikelola dengan baik menimbulkan dampak serius bagi lingkungan, kesehatan, dan ekosistem. Di Bali khususnya, penumpukan sampah di berbagai titik akibat kesiapan infrastruktur yang belum merata mengancam pariwisata dan kualitas hidup masyarakat.</p>
+      </div>
+    </div>
+
+
+
+    <!-- Tiga kategori dampak -->
+    <div class="dampak-grid">
+      <div class="dampak-card lingkungan">
+        <div class="dampak-card-top">
+          <div class="dampak-icon-wrap">🌍</div>
+          <div class="dampak-title">Dampak Lingkungan</div>
+        </div>
+        <div class="dampak-card-body">
+          <ul class="dampak-list">
+            <li>Pencemaran tanah akibat lindi (cairan sampah) yang meresap ke dalam tanah</li>
+            <li>Pencemaran air sungai dan laut oleh sampah plastik dan limbah rumah tangga</li>
+            <li>Pencemaran udara dari gas metana hasil pembusukan sampah organik</li>
+            <li>Penyumbatan saluran air yang menyebabkan banjir</li>
+            <li>Kerusakan estetika dan tata ruang lingkungan perumahan</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="dampak-card kesehatan">
+        <div class="dampak-card-top">
+          <div class="dampak-icon-wrap">🩺</div>
+          <div class="dampak-title">Dampak Kesehatan</div>
+        </div>
+        <div class="dampak-card-body">
+          <ul class="dampak-list">
+            <li>Menjadi sarang nyamuk dan lalat sebagai vektor penyakit (DBD, malaria)</li>
+            <li>Kontaminasi sumber air minum yang menyebabkan diare dan kolera</li>
+            <li>Gangguan pernapasan akibat pembakaran sampah sembarangan</li>
+            <li>Penyakit kulit akibat kontak langsung dengan sampah berbahaya</li>
+            <li>Dampak B3 seperti keracunan bahan kimia berbahaya dari sampah elektronik</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="dampak-card ekosistem">
+        <div class="dampak-card-top">
+          <div class="dampak-icon-wrap">🌊</div>
+          <div class="dampak-title">Dampak Ekosistem</div>
+        </div>
+        <div class="dampak-card-body">
+          <ul class="dampak-list">
+            <li>Mikroplastik merusak rantai makanan laut dan mengancam biota perairan</li>
+            <li>Hewan liar tersedak atau terjebak dalam sampah plastik</li>
+            <li>Kerusakan terumbu karang akibat sampah yang tenggelam di laut</li>
+            <li>Gangguan habitat satwa liar di darat akibat timbunan sampah</li>
+            <li>Penurunan biodiversitas di area yang tercemar sampah berat</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sampah organik vs anorganik dampak -->
+    <div class="two-col">
+      <div class="info-card">
+        <h3>🌿 Dampak Sampah Organik Tak Terkelola</h3>
+        <ul class="icon-list">
+          <li><span class="li-icon">💨</span> Menghasilkan gas metana (CH₄) — gas rumah kaca 25x lebih kuat dari CO₂</li>
+          <li><span class="li-icon">🦟</span> Menjadi tempat berkembang biak serangga dan tikus</li>
+          <li><span class="li-icon">💧</span> Lindi meresap dan mencemari air tanah</li>
+          <li><span class="li-icon">😷</span> Bau tidak sedap mengganggu kenyamanan lingkungan sekitar</li>
+        </ul>
+      </div>
+      <div class="info-card sky">
+        <h3>🔵 Dampak Sampah Anorganik Tak Terkelola</h3>
+        <ul class="icon-list">
+          <li><span class="li-icon">🐢</span> Plastik terurai sangat lambat — hingga ratusan tahun</li>
+          <li><span class="li-icon">🌊</span> Mencemari laut dan mengancam kehidupan biota laut</li>
+          <li><span class="li-icon">🔬</span> Menghasilkan mikroplastik yang masuk ke rantai makanan</li>
+          <li><span class="li-icon">🏞️</span> Mengurangi keindahan dan daya tarik wisata alam</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- KUIS EVALUASI DAMPAK -->
+    <div id="evalQuiz-dampak" class="eval-quiz-container">
+      <div class="eval-loading">⏳ Memuat kuis evaluasi...</div>
+    </div>
+
+    <div style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; margin-top:16px;">
+      <button class="btn-secondary" style="background:var(--green-pale);color:var(--green-dark);border:2px solid var(--green-light);" onclick="showPage('jenis')">← Kembali: Jenis Sampah</button>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== PAGE: PENGELOLAAN ==================== -->
+<div class="page" id="page-pengelolaan">
+  <div class="page-header" style="background: linear-gradient(135deg, #3a2a0a, #c4935a);">
+    <h2>Tata Cara Pengelolaan Sampah Rumah Tangga</h2>
+    <p>Langkah-langkah pengelolaan sampah organik dan anorganik secara mandiri — termasuk prinsip 3R: Reduce, Reuse, Recycle.</p>
+  </div>
+
+    <div class="video-container">
+    <video controls>
+        <source src="pengelolaan.mp4" type="video/mp4">
+    </video>
+</div>
+
+  <div class="content-area">
+
+    <!-- Prinsip 3R -->
+    <h3 style="font-family:'Baloo 2',cursive; font-size:1.25rem; color:var(--text); margin-bottom:20px;">🎯 Prinsip 3R — Pilar Pengelolaan Sampah</h3>
+    <div class="tiga-r">
+      <div class="r-card reduce">
+        <div class="r-card-top">
+          <div class="r-badge">R1</div>
+          <div class="r-name">Reduce</div>
+          <div class="r-name-id">Mengurangi</div>
+        </div>
+        <div class="r-card-body">
+          <p>Upaya mengurangi produksi sampah sejak dari sumbernya dengan mengubah gaya hidup dan pola konsumsi yang lebih bijak dan bertanggung jawab.</p>
+          <div class="r-examples">
+            <span class="r-ex">Bawa tas belanja sendiri</span>
+            <span class="r-ex">Kurangi plastik sekali pakai</span>
+            <span class="r-ex">Beli produk isi ulang</span>
+            <span class="r-ex">Kurangi kemasan berlebih</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="r-card reuse">
+        <div class="r-card-top">
+          <div class="r-badge">R2</div>
+          <div class="r-name">Reuse</div>
+          <div class="r-name-id">Menggunakan Kembali</div>
+        </div>
+        <div class="r-card-body">
+          <p>Menggunakan kembali barang-barang yang masih layak pakai sehingga memperpanjang masa guna produk dan mengurangi jumlah sampah yang dibuang.</p>
+          <div class="r-examples">
+            <span class="r-ex">Botol bekas jadi pot</span>
+            <span class="r-ex">Kardus jadi tempat penyimpanan</span>
+            <span class="r-ex">Kain perca jadi lap</span>
+            <span class="r-ex">Kantong plastik dipakai ulang</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="r-card recycle">
+        <div class="r-card-top">
+          <div class="r-badge">R3</div>
+          <div class="r-name">Recycle</div>
+          <div class="r-name-id">Mendaur Ulang</div>
+        </div>
+        <div class="r-card-body">
+          <p>Mengolah kembali sampah menjadi produk baru yang bermanfaat sehingga memiliki nilai ekonomi dan mengurangi ketergantungan pada bahan baku baru.</p>
+          <div class="r-examples">
+            <span class="r-ex">Kompos dari organik</span>
+            <span class="r-ex">Kertas daur ulang</span>
+            <span class="r-ex">Kerajinan dari plastik</span>
+            <span class="r-ex">Peleburan logam</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Langkah pengelolaan -->
+    <h3 style="font-family:'Baloo 2',cursive; font-size:1.2rem; color:var(--text); margin-bottom:20px;">📋 Langkah-Langkah Pengelolaan Sampah Rumah Tangga</h3>
+    <div class="steps">
+      <div class="step-item">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <h4>Pemilahan Sampah dari Sumber</h4>
+          <p>Pisahkan sampah berdasarkan jenisnya sejak dari dapur: sampah organik (sisa makanan, daun), sampah anorganik yang dapat didaur ulang (plastik, kertas, logam), sampah B3 (baterai, obat kadaluarsa), dan sampah residu. Gunakan tempat sampah berlabel berbeda.</p>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <h4>Pengolahan Sampah Organik menjadi Kompos</h4>
+          <p>Sampah organik rumah tangga seperti sisa makanan, daun kering, dan potongan sayuran dapat diolah menjadi kompos menggunakan metode komposter sederhana atau lubang resapan biopori di halaman rumah.</p>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <h4>Pemanfaatan Kembali Sampah Anorganik</h4>
+          <p>Sampah anorganik yang masih layak (botol plastik, kardus, kertas) dikumpulkan dan diserahkan ke bank sampah atau pengepul daur ulang. Sebagian dapat dimanfaatkan ulang menjadi kerajinan tangan bernilai ekonomi.</p>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">4</div>
+        <div class="step-content">
+          <h4>Penanganan Khusus Sampah B3</h4>
+          <p>Sampah mengandung bahan berbahaya (baterai, lampu bohlam, obat, kemasan pestisida) harus dikumpulkan terpisah dan diserahkan ke pusat pengumpulan B3 atau fasilitas daur ulang khusus — jangan dibuang sembarangan!</p>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">5</div>
+        <div class="step-content">
+          <h4>Sampah Residu ke TPA</h4>
+          <p>Sampah yang tidak dapat didaur ulang maupun dikomposkan (popok, tisu kotor, puntung rokok) dikemas rapi dan diserahkan ke petugas pengangkut sampah untuk dibawa ke TPA. Kuantitasnya diupayakan sesedikit mungkin.</p>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- KUIS EVALUASI PENGELOLAAN -->
+    <div id="evalQuiz-pengelolaan" class="eval-quiz-container">
+      <div class="eval-loading">⏳ Memuat kuis evaluasi...</div>
+    </div>
+
+    <div style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; margin-top:16px;">
+      <button class="btn-secondary" style="background:var(--green-pale);color:var(--green-dark);border:2px solid var(--green-light);" onclick="showPage('dampak')">← Kembali: Dampak</button>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== PAGE: KUIS ==================== -->
+<div class="page" id="page-kuis">
+  <div class="page-header" style="background: linear-gradient(135deg, #4a3a00, #c4a500);">
+    <div class="page-header-label">📝 Modul 5 — Kuis Interaktif</div>
+    <h2>Evaluasi Pembelajaran</h2>
+    <p>Jawab 10 pertanyaan seputar pengelolaan sampah dan dapatkan skor usability langsung. Sebagai sarana evaluasi dan feedback untuk mengukur tingkat pemahaman.</p>
+  </div>
+
+  <!-- Peringatan jika belum unlock semua halaman -->
+  <div id="kuisLockWarning" style="display:none; margin:32px; background:#fff3cd; border:2px solid #ffc107; border-radius:16px; padding:28px; text-align:center;">
+    <div style="font-size:2.5rem; margin-bottom:12px;">🔒</div>
+    <h3 style="font-family:'Baloo 2',cursive; color:#856404; margin-bottom:10px;">Kuis Umum Belum Tersedia</h3>
+    <p style="color:#664d03; font-size:0.95rem; line-height:1.6;">Kamu harus menyelesaikan semua materi dan kuis evaluasi terlebih dahulu:<br>
+    <strong>Pengenalan → Jenis Sampah → Dampak → Pengelolaan</strong></p>
+  </div>
+
+  <div class="kuis-wrapper">
+    <!-- Progress -->
+    <div class="kuis-progress">
+      <div class="kuis-progress-fill" id="kuisProgress" style="width:0%"></div>
+    </div>
+
+    <!-- Header info -->
+    <div class="kuis-header">
+      <span class="kuis-counter" id="kuisCounter">Soal 0 dari 10</span>
+      <span class="kuis-score-live" id="kuisScoreLive">Skor: 0</span>
+    </div>
+
+    <!-- Quiz area -->
+    <div id="kuisArea">
+      <div class="kuis-card" id="kuisCard">
+        <canvas id="confettiCanvas" style="position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;border-radius:var(--radius);display:none;z-index:10;"></canvas>
+        <div class="kuis-q-num" id="kuisQNum">Pertanyaan 1</div>
+        <div class="kuis-question" id="kuisQuestion">Memuat soal...</div>
+        <div class="kuis-options" id="kuisOptions"></div>
+        <div class="kuis-feedback" id="kuisFeedback"></div>
+      </div>
+      <div class="kuis-nav">
+        <button class="btn-prev" id="btnPrev" onclick="prevQuestion()">← Soal Sebelumnya</button>
+        <button class="btn-next" id="btnNext" onclick="nextQuestion()">Soal Berikutnya →</button>
+      </div>
+    </div>
+
+    <!-- Result -->
+    <div class="kuis-result" id="kuisResult">
+      <canvas id="confettiCanvasResult" style="position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;border-radius:var(--radius);display:none;z-index:10;"></canvas>
+      <div class="result-emoji" id="resultEmoji">🎉</div>
+      <div class="result-title" id="resultTitle">Selamat!</div>
+      <div class="result-score" id="resultScore">0/10</div>
+      <div class="result-breakdown">
+        <div class="rb-item cor">
+          <div class="rb-val" id="resCorrect">0</div>
+          <div class="rb-lbl">✅ Benar</div>
+        </div>
+        <div class="rb-item wrg">
+          <div class="rb-val" id="resWrong">0</div>
+          <div class="rb-lbl">❌ Salah</div>
+        </div>
+      </div>
+      <div class="result-msg" id="resultMsg">Bagus sekali!</div>
+      <button class="btn-retry" onclick="resetKuis()">🔄 Coba Lagi</button>
+    </div>
+
+    <!-- Flowchart -->
+    </div>
+</div>
+
+<!-- ===================== FOOTER ===================== -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-logo">♻️ EcoLearn</div>
+      <div class="footer-desc">Multimedia Pembelajaran Pengelolaan Sampah Berbasis Website. Dikembangkan sebagai Tugas Akhir Program Studi S1-Sistem Informasi, ITB STIKOM Bali (2026). Menggunakan metode Waterfall dan MDLC.</div>
+    </div>
+    <div class="footer-section">
+      <h4>Menu Pembelajaran</h4>
+      <ul>
+        <li><a onclick="showPage('pengenalan')">📖 Pengenalan Sampah</a></li>
+        <li><a onclick="showPage('jenis')">🗂️ Jenis &amp; Sumber</a></li>
+        <li><a onclick="showPage('dampak')">⚠️ Dampak Sampah</a></li>
+        <li><a onclick="showPage('pengelolaan')">♻️ Pengelolaan</a></li>
+        <li><a onclick="showPage('kuis')">📝 Kuis Interaktif</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h4>Informasi Penelitian</h4>
+      <ul>
+        <li><a>👤 I Putu Suastika Dharma Putra</a></li>
+        <li><a>🎓 NIM: 220030613</a></li>
+        <li><a>🏛️ ITB STIKOM Bali</a></li>
+        <li><a>📅 Tahun 2026</a></li>
+        <li><a>🔬 Metode: Waterfall + MDLC</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    © 2026 EcoLearn – Multimedia Pembelajaran Pengelolaan Sampah Berbasis Website &nbsp;|&nbsp; ITB STIKOM Bali &nbsp;|&nbsp; Tugas Akhir S1 Sistem Informasi
+    <br><br>
+    <button class="reset-progress-btn" onclick="resetAllProgress()">🔄 Reset Progress Belajar</button>
+  </div>
+</footer>
+
+</div><!-- end #site -->
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
